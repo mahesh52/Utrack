@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+<head>
+<link  rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<header>
+<nav>
+<li><a href="page.html">HOME</a></li>
+<li><a href="javascript:aboutus()">ABOUTUS</a></li>
+<li><a href="javascript:contactus()">CONTACTUS</a></li>
+</nav>
+</header>
+<div class="image">
+ <img src="images/pexels-photo.jpg" alt="Northern Lights" width="100%" height="200px">
+ </div>
+ <div id="raj">
+  fksdfjfjsdflkflsdffjldkflkjkfgkldsfdlkdffllgjnkjsdkfndfksdfnjkdknsdsd
+kjhuisdsdfsasddifisjds;fjoij;ij;oijoijddjgoijoidjdgijj
+jsdhfhkasedjkfkjslidflijijisjdsdkfjijoisdsdlijasisd
+asjhdbfsjsdfassdifjoisdsdsoijg.
+ </div>
+
+<footer>
+<nav>
+<li><a href="https://www.google.co.in/search?rlz=1C1GCEB_enIN753IN753&q=google&oq=google&gs_l=psy-ab.3..35i39k1l2j0i67k1l2.39170.80647.0.83230.13.10.3.0.0.0.171.1540.0j10.10.0....0...1.1.64.psy-ab..0.13.1562.6..0j0i131k1.ZQVOVcz1hlI"><img src="images/images.png"" width="30px" height="30px" style="background-color:none;"></a></li>
+<li><a href="https://www.google.co.in/search?q=twitter&rlz=1C1GCEB_enIN753IN753&oq=twii&aqs=chrome.1.69i57j0l5.5445j0j7&sourceid=chrome&ie=UTF-8"><img src="images/twitter-icon-download-18.png""" width="30px" height="30px"></a></li>
+<li><a href="https://www.google.co.in/search?rlz=1C1GCEB_enIN753IN753&q=gmail&oq=gmail&gs_l=psy-ab.3..35i39k1l2j0i131k1j0i20k1.28430.37192.0.38250.16.14.2.0.0.0.220.2243.0j12j2.14.0....0...1.1.64.psy-ab..0.16.2257.6..0j0i67k1j0i131i67k1j0i10k1j0i10i67k1.gpd3VFt5f2E"><img src="images/images (1).png""" width="30px" height="30px"></a></li>
+</nav>
+</footer>
+ </body>
+<script>
+    function aboutus(){
+		  alert("add");
+		var xhttp=new XMLHttpRequest();
+		xhttp.onreadystatechange=function(){
+		if(xhttp.readyState==4 && xhttp.status==200)
+		{
+			document.getElementById("raj").innerHTML=xhttp.responseText;
+
+		}
+		}
+		xhttp.open("POST","aboutus.html",true);
+		xhttp.send();
+		}
+	function contactus(){
+		  alert("add");
+		var xhttp=new XMLHttpRequest();
+		xhttp.onreadystatechange=function(){
+		if(xhttp.readyState==4 && xhttp.status==200)
+		{
+			document.getElementById("raj").innerHTML=xhttp.responseText;
+
+		}
+		}
+		xhttp.open("POST","contactus.html",true);
+		xhttp.send();
+		}
+	
+</script>
+</html>

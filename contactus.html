@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<script type="text/javascript">
+
+function myfun(){
+var firstname=document.getElementById("firstname").value;
+var lastname=document.getElementById("lastname").value;
+var email=document.getElementById("email").value;
+var mobilenumber=document.getElementById("number").value;
+var error_code=0;
+
+ 
+if(firstname==""){
+document.getElementById("fname").innerHTML="<font color='white'>pls enter the name</font>";
+var error_code=1;
+}
+if(lastname==""){
+document.getElementById("flname").innerHTML="<font color='white'>pls enter the name</font>";
+var error_code=1;
+}
+if(email==""){
+document.getElementById("femail").innerHTML="<font color='white'>pls enter the email</font>";
+var error_code=1;
+}
+if(mobilenumber==""){
+document.getElementById("fnumber").innerHTML="<font color='white'>pls enter the name</font>";
+var error_code=1;
+}
+
+if(error_code==1){
+return false;
+}else{
+return true;}
+}
+
+
+function checkValue(value,idattr,labl){
+if(value == ""){
+document.getElementById(idattr).innerHTML="<font color='white'>pls enter the "+labl+"</font>";
+}
+else{
+document.getElementById(idattr).innerHTML="";
+}
+}
+
+</script>
+<body>
+<form action="google.com" onsubmit="return myfun()">
+<fieldset>
+<legend style="text-align:center">form details</legend>
+<label>firstname:</label>
+<input type="text" placeholder="enter the name" id="firstname" onkeypress="checkValue(this.value,'fname','FirstName')" required>
+<br><span id="fname"></span><br>
+<label>lastename:</label>
+<input type="text" placeholder="enter the name" id="lastname"  onkeypress="checkValue(this.value,'flname','lastName')" ><br><span id="flname" required></span><br>
+<label>email:</label>
+<input type="email" placeholder="enter the email" id="email" onkeypress="checkValue(this.value,'femail','email')"><br><span id="femail"  required></span><br>
+<label>mobilenumber:</label>
+<input type="number"  placeholder="enter the number" id="number" onkeypress="checkValue(this.value,'fnumber','mobilenumber')"><br><span id="fnumber"  required></span><br>
+<input type="submit" value="submit">
+</fieldset>
+</form>
+</body>
+</html>
